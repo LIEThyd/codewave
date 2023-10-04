@@ -1,0 +1,24 @@
+---
+interface Props {
+	p1: string;
+	p2: string;
+
+}
+
+const { p1 , p2 } = Astro.props;
+---
+
+<div class="space-y-5" >
+    <p>{p1}</p>
+    <p class="text-white" >{p2}</p>
+</div>
+
+
+<style is:global > 
+p {
+    line-height: 3rem;
+    text-wrap: balance;
+}
+
+
+</style>
