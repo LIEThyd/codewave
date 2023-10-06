@@ -1,13 +1,30 @@
+---
+interface Props {
+	src: string;
+	name: string;
+	desg: string;
+	twitter: string;
+	github: string;
+	linkedin: string;
+	pageLink: string;
+
+
+
+}
+
+const { src,name,desg,twitter,github,linkedin,pageLink } = Astro.props;
+---
+
 <div class="p-4 lg:w-1/4 md:w-1/2">
     <div class="h-full flex flex-col items-center text-center">
-        <a href='/teams/abdul-vasay' >
+        <a href={pageLink} >
             <img alt="team" class="flex-shrink-0 rounded-lg w-full   mb-4"
-            src="https://avatars3.githubusercontent.com/abdulvasay-234">
+            src={src}>
         </a>
         
         <div class="w-full">
-            <h2 class="title-font font-medium  sm:text-2xl text-lg text-[#ABD7FF] ">Alper Kamu</h2>
-            <h3 class="text-[#86c3f8a1] my-3">UI Developer</h3>
+            <h2 class="title-font font-medium  sm:text-2xl text-lg text-[#ABD7FF] ">{name}</h2>
+            <h3 class="text-[#86c3f8a1] my-3">{desg}</h3>
             <div class="grid grid-cols-2">
                 <span class="inline-flex">
                     <a class="text-white">
@@ -33,7 +50,7 @@
                         </svg>
                     </a>
                 </span>
-                <a href='/teams/abdul-vasay' class="mb-4">Read More....</a>
+                <a href={pageLink} class="mb-4 text-cyan-300">Read More....</a>
 
             </div>
 
